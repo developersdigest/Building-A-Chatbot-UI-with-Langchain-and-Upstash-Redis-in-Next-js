@@ -31,6 +31,7 @@ export const ChatArea = ({ chatId, setChatId }: ChatAreaProps) => {
           }
           if (data.length > 0) {
             // 5. Filtering and mapping chat data
+            data = data.reverse();
             data = data.filter((item) => item.data.content);
             data = data.map((item, i) => {
               return {
